@@ -63,3 +63,40 @@
         font-size: 2.5rem;
     }
 }
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-content {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Project hover effect */
+.gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+}
+
+/* Typewriter effect */
+.typewriter {
+    border-right: 2px solid var(--teal-accent);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--teal-accent) }
+}
