@@ -3,349 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manash Hada | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter :wght@400;600;800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --dark-bg: #0a0a0a;
-            --teal: #008080;
-            --light: #f0f0f0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--dark-bg);
-            color: var(--light);
-            line-height: 1.6;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            padding: 1rem 2rem;
-            z-index: 1000;
-            border-bottom: 2px solid var(--teal);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-logo {
-            color: var(--teal);
-            font-size: 1.5rem;
-            font-weight: 800;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            margin-left: 2rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--teal);
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 4rem 2rem;
-            background: #111;
-            text-align: center;
-        }
-
-        .hero img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 2rem;
-            border: 2px solid var(--teal);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--teal);
-        }
-
-        .hero p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-icons a {
-            color: var(--light);
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: var(--teal);
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--teal);
-            color: #000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 0.5rem;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #00a9a9;
-        }
-
-        section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        section:nth-child(even) {
-            background: #111;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--teal);
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-tag {
-            background: #222;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            color: var(--teal);
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-        }
-
-        .experience-item h3 {
-            color: var(--teal);
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .gallery-item {
-            background: #222;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .gallery-caption {
-            padding: 1rem;
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #111;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Manash Hada - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <div class="nav">
-            <div class="nav-logo">Manash Hada</div>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#hero" class="logo">MH</a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#badges">Badges</a>
-                <a href="#gallery">Gallery</a>
-                <a href="/cv.html" target="_blank">CV</a>
+                <a href="cv.html">CV</a>
+                <a href="gallery.html">Gallery</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <section class="hero">
-        <img src="https://via.placeholder.com/150 " alt="Profile Picture">
-        <h1>Manash Hada</h1>
-        <p>I'm a first-year BSc IT student at Presidential Graduate School, passionate about cybersecurity, data science, and AI chatbots.</p>
-        
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/manash-hada " target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/manashhada " target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://instagram.com/manash_hada " target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:manash@example.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        
-        <a href="https://friend-portfolio.com " class="btn" target="_blank">Friend's Portfolio</a>
-        <a href="/Manash_Hada_CV.pdf" class="btn" download>Download CV</a>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div>
-                <p>I'm a first-year BSc IT student at Presidential Graduate School, passionate about cybersecurity, data science, and AI chatbots. I'm actively involved in tech communities like Code for Change and the Cybersecurity Club. I enjoy exploring emerging technologies, writing walkthroughs to help beginners, and building practical skills through hands-on projects.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Manash Hada</h1>
+            <h2>Cybersecurity Enthusiast & IT Student</h2>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <div>
-                <h3>Personal Interests</h3>
-                <ul>
-                    <li>• Cybersecurity research</li>
-                    <li>• Data science projects</li>
-                    <li>• AI chatbot development</li>
-                    <li>• Writing tech tutorials</li>
-                    <li>• Fitness and nutrition</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div style="margin-top: 3rem;">
-            <h3>Technical Skills</h3>
-            <div class="skills-list">
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">Networking</div>
-                <div class="skill-tag">Cybersecurity</div>
-                <div class="skill-tag">Arduino</div>
-                <div class="skill-tag">Web Exploitation</div>
-                <div class="skill-tag">Writing</div>
-                <div class="skill-tag">Leadership</div>
+            <div class="cta-buttons">
+                <a href="friend-portfolio.html" class="btn">View Colleague's Work</a>
+                <a href="cv.html" class="btn">View Full CV</a>
             </div>
         </div>
     </section>
 
-    <section id="experience">
-        <h2 class="section-title">Professional Experience</h2>
-        
-        <div class="experience-item">
-            <h3>Presidential Graduate School - BSc IT Student</h3>
-            <p>2023 - Present</p>
-            <ul>
-                <li>Actively involved in tech communities (Code for Change, Cybersecurity Club)</li>
-                <li>Leading team projects in cybersecurity and AI</li>
-                <li>Writing technical walkthroughs for beginner developers</li>
-            </ul>
-        </div>
-        
-        <div class="experience-item">
-            <h3>Tech Community Involvement</h3>
-            <p>Cybersecurity Club Member</p>
-            <ul>
-                <li>Organizing CTF competitions</li>
-                <li>Participating in threat hunting exercises</li>
-                <li>Conducting digital forensics workshops</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="badges">
-        <h2 class="section-title">Badges & Certifications</h2>
-        
-        <div class="experience-item">
-            <h3>Certified Ethical Hacker (CEH) - Fundamentals</h3>
-            <p>EC-Council | 2023</p>
-        </div>
-        
-        <div class="experience-item">
-            <h3>Python for Data Science - Academic</h3>
-            <p>Presidential Graduate School | 2023</p>
-        </div>
-        
-        <div class="experience-item">
-            <h3>Cybersecurity Club Leadership Certificate</h3>
-            <p>Presidential Graduate School | 2023</p>
-        </div>
-    </section>
-
-    <section id="gallery">
-        <h2 class="section-title">Project Gallery</h2>
-        
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x150 " alt="Project 1">
-                <div class="gallery-caption">Cybersecurity Research Project</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x150 " alt="Project 2">
-                <div class="gallery-caption">AI Chatbot Development</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x150 " alt="Project 3">
-                <div class="gallery-caption">Data Science Analysis</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x150 " alt="Project 4">
-                <div class="gallery-caption">Web Vulnerability Assessment</div>
+    <!-- About Section -->
+    <section id="about" class="section dark-section">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="bio">
+                    <p>I'm a first-year BSc IT student at Presidential Graduate School, passionate about cybersecurity, data science, and AI chatbots...</p>
+                    <h3>Interests</h3>
+                    <ul class="interests-list">
+                        <li>Cybersecurity CTFs</li>
+                        <li>AI Chatbot Development</li>
+                        <li>Network Security</li>
+                    </ul>
+                </div>
+                <div class="skills-container">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <!-- Add more skills -->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Manash Hada. All rights reserved.</p>
-        <a href="#top" style="color: var(--teal); display: inline-block; margin-top: 1rem;">Back to Top</a>
-    </footer>
+    <!-- Add Experience and Badges sections -->
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
