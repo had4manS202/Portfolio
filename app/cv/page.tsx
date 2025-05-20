@@ -1,5 +1,4 @@
 "use client"
-import { useState } from 'react';
 import { 
   Briefcase, 
   GraduationCap, 
@@ -11,8 +10,6 @@ import {
 } from 'lucide-react';
 
 export default function ManashHadaCV() {
-  const [activeTab, setActiveTab] = useState('all');
-
   return (
     <div className="max-w-4xl mx-auto bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden">
       {/* Header Section */}
@@ -35,33 +32,9 @@ export default function ManashHadaCV() {
         </div>
       </div>
 
-      {/* Tabs Navigation */}
-      <div className="bg-gray-100 border-b border-gray-200">
-        <div className="flex justify-center space-x-2 p-2">
-          <button 
-            className={`px-4 py-2 rounded-md ${activeTab === 'all' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
-            onClick={() => setActiveTab('all')}
-          >
-            All
-          </button>
-          <button 
-            className={`px-4 py-2 rounded-md ${activeTab === 'skills' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
-            onClick={() => setActiveTab('skills')}
-          >
-            Skills
-          </button>
-          <button 
-            className={`px-4 py-2 rounded-md ${activeTab === 'education' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
-            onClick={() => setActiveTab('education')}
-          >
-            Education
-          </button>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="p-6">
-        {/* Summary Section - Always visible */}
+        {/* Summary Section */}
         <div className="mb-8">
           <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
             SUMMARY
@@ -75,78 +48,74 @@ export default function ManashHadaCV() {
         </div>
 
         {/* Skills Section */}
-        {(activeTab === 'all' || activeTab === 'skills') && (
-          <div className="mb-8">
-            <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
-              SKILLS
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
-                <Terminal className="text-indigo-600 mr-3" size={24} />
-                <span>Kali Linux</span>
-              </div>
-              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
-                <Code className="text-indigo-600 mr-3" size={24} />
-                <span>C Programming</span>
-              </div>
-              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
-                <Shield className="text-indigo-600 mr-3" size={24} />
-                <span>CTFs</span>
-              </div>
-              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
-                <Briefcase className="text-indigo-600 mr-3" size={24} />
-                <span>Problem Solving</span>
-              </div>
-              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
-                <Mail className="text-indigo-600 mr-3" size={24} />
-                <span>Graphic Design</span>
-              </div>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
+            SKILLS
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+              <Terminal className="text-indigo-600 mr-3" size={24} />
+              <span>Kali Linux</span>
+            </div>
+            <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+              <Code className="text-indigo-600 mr-3" size={24} />
+              <span>C Programming</span>
+            </div>
+            <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+              <Shield className="text-indigo-600 mr-3" size={24} />
+              <span>CTFs</span>
+            </div>
+            <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+              <Briefcase className="text-indigo-600 mr-3" size={24} />
+              <span>Problem Solving</span>
+            </div>
+            <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+              <Mail className="text-indigo-600 mr-3" size={24} />
+              <span>Graphic Design</span>
             </div>
           </div>
-        )}
+        </div>
 
         {/* Education Section */}
-        {(activeTab === 'all' || activeTab === 'education') && (
-          <div className="mb-8">
-            <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
-              EDUCATION
-            </h2>
-            <div className="space-y-6">
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
-                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
-                  <span className="text-indigo-700 font-medium">2024 - 2028</span>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-lg font-semibold">Presidential Graduate School</h3>
-                  <p className="text-gray-600">BACHELOR OF TECHNOLOGY</p>
-                </div>
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
+            EDUCATION
+          </h2>
+          <div className="space-y-6">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
+                <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                <span className="text-indigo-700 font-medium">2024 - 2028</span>
               </div>
-              
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
-                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
-                  <span className="text-indigo-700 font-medium">2023 - 2024</span>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-lg font-semibold">Trinity International SS & College</h3>
-                  <p className="text-gray-600">SECONDARY SCHOOL</p>
-                </div>
+              <div className="md:w-3/4">
+                <h3 className="text-lg font-semibold">Presidential Graduate School</h3>
+                <p className="text-gray-600">BACHELOR OF TECHNOLOGY</p>
               </div>
-              
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
-                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
-                  <span className="text-indigo-700 font-medium">2017 - 2023</span>
-                </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-lg font-semibold">Little Angels School</h3>
-                  <p className="text-gray-600">PRIMARY SCHOOL</p>
-                </div>
+            </div>
+            
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
+                <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                <span className="text-indigo-700 font-medium">2023 - 2024</span>
+              </div>
+              <div className="md:w-3/4">
+                <h3 className="text-lg font-semibold">Trinity International SS & College</h3>
+                <p className="text-gray-600">SECONDARY SCHOOL</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
+                <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                <span className="text-indigo-700 font-medium">2017 - 2023</span>
+              </div>
+              <div className="md:w-3/4">
+                <h3 className="text-lg font-semibold">Little Angels School</h3>
+                <p className="text-gray-600">PRIMARY SCHOOL</p>
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Footer */}
