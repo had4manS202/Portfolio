@@ -1,26 +1,47 @@
 "use server"
 
-// This is a server action to handle form submission
-export async function submitContactForm(data: {
+import nodemailer from "nodemailer"
+
+type ContactFormData = {
   name: string
   email: string
   subject: string
   message: string
-}) {
-  // Add a small delay to simulate network request
-  await new Promise((resolve) => setTimeout(resolve, 1000))
+}
 
-  // Log the form data (in a real app, you would send an email or store in a database)
-  console.log("Form submission:", data)
+export async function submitContactForm(data: ContactFormData) {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  })
 
-  // In a real application, you would implement email sending logic here
-  // Example:
-  // await sendEmail({
-  //   to: "your-email@example.com",
-  //   subject: `Contact Form: ${data.subject}`,
-  //   text: `Name: ${data.name}\nEmail: ${data.email}\nMessage: ${data.message}`,
-  // });
+  const mailOptions = {
+    from: `"${data.name}" <${data.email}>`,
+    to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+    subject: data.subject,
+    text: `
+Name: ${data.name}
+Email: ${data.email}
+Subject: ${data.subject}
+Message: ${data.message}
+    `,
+    html: `
+      <p><strong>Name:</strong> ${data.name}</p>
+      <p><strong>Email:</strong> ${data.email}</p>
+      <p><strong>Subject:</strong> ${data.subject}</p>
+      <p><strong>Message:</strong><br/>${data.message}</p>
+    `,
+  }
 
-  // For demonstration purposes, we'll just return success
-  return { success: true }
+  try {
+    await transporter.sendMail(mailOptions)
+    console.log("Email sent successfully.")
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to send email:", error)
+    return { success: false, error: "Failed to send email" }
+  }
 }
