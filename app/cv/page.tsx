@@ -1,215 +1,158 @@
 "use client"
+import { useState } from 'react';
+import { 
+  Briefcase, 
+  GraduationCap, 
+  Mail, 
+  MapPin, 
+  Code, 
+  Terminal,
+  Shield
+} from 'lucide-react';
 
-import { motion } from "framer-motion"
-import { Download, Mail, Github, Linkedin, Globe, Calendar, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-
-export default function CVPage() {
-  const skills = [
-    { name: "Penetration Testing", level: 95 },
-    { name: "Network Security", level: 90 },
-    { name: "Secure Coding", level: 85 },
-    { name: "Vulnerability Assessment", level: 92 },
-    { name: "Security Architecture", level: 88 },
-    { name: "Incident Response", level: 80 },
-    { name: "Cloud Security", level: 75 },
-    { name: "Cryptography", level: 70 },
-  ]
-
-  const experience = [
-    {
-      title: "Senior Security Consultant",
-      company: "CyberShield Solutions",
-      period: "2020 - Present",
-      description:
-        "Lead security assessments and penetration testing for enterprise clients. Develop security frameworks and provide strategic guidance on cybersecurity initiatives.",
-    },
-    {
-      title: "Security Engineer",
-      company: "SecureNet Technologies",
-      period: "2017 - 2020",
-      description:
-        "Implemented security controls and conducted vulnerability assessments. Developed secure coding practices and performed code reviews for critical applications.",
-    },
-    {
-      title: "Network Security Analyst",
-      company: "DataGuard Inc.",
-      period: "2015 - 2017",
-      description:
-        "Monitored network traffic for security threats and implemented defensive measures. Conducted security audits and recommended improvements to network infrastructure.",
-    },
-  ]
-
-  const education = [
-    {
-      degree: "Master of Science in Cybersecurity",
-      institution: "Tech University",
-      year: "2015",
-    },
-    {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "State University",
-      year: "2013",
-    },
-  ]
-
-  const certifications = [
-    "Certified Ethical Hacker (CEH)",
-    "Certified Information Systems Security Professional (CISSP)",
-    "Offensive Security Certified Professional (OSCP)",
-    "Certified Cloud Security Professional (CCSP)",
-    "CompTIA Security+",
-  ]
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-  }
+export default function ManashHadaCV() {
+  const [activeTab, setActiveTab] = useState('all');
 
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
-      <div className="flex justify-between items-start mb-12 flex-col md:flex-row gap-6">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white mb-2">John Doe</h1>
-          <h2 className="text-xl text-cyan-500 mb-4">Cybersecurity Expert</h2>
-          <div className="flex flex-col sm:flex-row gap-4 text-slate-400">
-            <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4" />
-              <span>john.doe@example.com</span>
+    <div className="max-w-4xl mx-auto bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden">
+      {/* Header Section */}
+      <div className="bg-indigo-900 text-white p-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold tracking-wide">MANASH HADA</h1>
+            <p className="text-indigo-200 mt-1 text-lg">CYBERSECURITY ENTHUSIAST</p>
+          </div>
+          <div className="mt-4 md:mt-0 flex flex-col">
+            <div className="flex items-center mb-2">
+              <Mail size={16} className="mr-2" />
+              <span className="text-indigo-100">hadamanash2023@gmail.com</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" />
-              <span>San Francisco, CA</span>
+            <div className="flex items-center">
+              <MapPin size={16} className="mr-2" />
+              <span className="text-indigo-100">33, Lokanthali, Bhaktapur</span>
             </div>
           </div>
         </div>
-        <Button className="bg-cyan-600 hover:bg-cyan-700 text-white">
-          <Download className="mr-2 h-4 w-4" /> Download CV
-        </Button>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-[1fr_300px]">
-        <motion.div variants={container} initial="hidden" animate="show" className="space-y-12">
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Professional Summary</h2>
-            <p className="text-slate-300 leading-relaxed">
-              Experienced cybersecurity professional with over 8 years of expertise in securing digital assets,
-              conducting penetration testing, and implementing robust security frameworks. Passionate about staying
-              ahead of emerging threats and developing innovative solutions to complex security challenges.
-            </p>
-          </motion.section>
+      {/* Tabs Navigation */}
+      <div className="bg-gray-100 border-b border-gray-200">
+        <div className="flex justify-center space-x-2 p-2">
+          <button 
+            className={`px-4 py-2 rounded-md ${activeTab === 'all' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+            onClick={() => setActiveTab('all')}
+          >
+            All
+          </button>
+          <button 
+            className={`px-4 py-2 rounded-md ${activeTab === 'skills' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+            onClick={() => setActiveTab('skills')}
+          >
+            Skills
+          </button>
+          <button 
+            className={`px-4 py-2 rounded-md ${activeTab === 'education' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-800'}`}
+            onClick={() => setActiveTab('education')}
+          >
+            Education
+          </button>
+        </div>
+      </div>
 
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Professional Experience</h2>
-            <div className="space-y-8">
-              {experience.map((job, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between items-start flex-col sm:flex-row gap-1">
-                    <h3 className="text-xl font-bold text-white">{job.title}</h3>
-                    <div className="flex items-center text-cyan-500 text-sm">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {job.period}
-                    </div>
-                  </div>
-                  <div className="text-lg text-slate-300">{job.company}</div>
-                  <p className="text-slate-400">{job.description}</p>
-                </div>
-              ))}
-            </div>
-          </motion.section>
+      {/* Main Content */}
+      <div className="p-6">
+        {/* Summary Section - Always visible */}
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
+            SUMMARY
+          </h2>
+          <p className="text-gray-700">
+            I am a dedicated BSc IT student with a strong interest in cybersecurity and data science. 
+            I enjoy working on hands-on projects like CTF challenges, Arduino-based systems, and learning 
+            about ethical hacking and network security. I'm always curious to learn new technologies and 
+            enjoy solving problems step by step with focus and consistency.
+          </p>
+        </div>
 
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Education</h2>
-            <div className="space-y-4">
-              {education.map((edu, index) => (
-                <div key={index} className="space-y-1">
-                  <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
-                  <div className="flex justify-between items-start flex-col sm:flex-row gap-1">
-                    <div className="text-slate-300">{edu.institution}</div>
-                    <div className="text-cyan-500">{edu.year}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.section>
-
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Certifications</h2>
-            <ul className="grid gap-2 sm:grid-cols-2">
-              {certifications.map((cert, index) => (
-                <li key={index} className="flex items-center gap-2 text-slate-300">
-                  <div className="h-2 w-2 rounded-full bg-cyan-500" />
-                  {cert}
-                </li>
-              ))}
-            </ul>
-          </motion.section>
-        </motion.div>
-
-        <motion.div variants={container} initial="hidden" animate="show" className="space-y-12">
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Skills</h2>
-            <div className="space-y-4">
-              {skills.map((skill, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-slate-300">{skill.name}</span>
-                    <span className="text-cyan-500">{skill.level}%</span>
-                  </div>
-                  <Progress value={skill.level} className="h-2 bg-slate-700" indicatorClassName="bg-cyan-500" />
-                </div>
-              ))}
-            </div>
-          </motion.section>
-
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Languages</h2>
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span className="text-slate-300">English</span>
-                <span className="text-cyan-500">Native</span>
+        {/* Skills Section */}
+        {(activeTab === 'all' || activeTab === 'skills') && (
+          <div className="mb-8">
+            <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
+              SKILLS
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+                <Terminal className="text-indigo-600 mr-3" size={24} />
+                <span>Kali Linux</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-slate-300">Spanish</span>
-                <span className="text-cyan-500">Fluent</span>
+              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+                <Code className="text-indigo-600 mr-3" size={24} />
+                <span>C Programming</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-slate-300">French</span>
-                <span className="text-cyan-500">Basic</span>
+              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+                <Shield className="text-indigo-600 mr-3" size={24} />
+                <span>CTFs</span>
+              </div>
+              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+                <Briefcase className="text-indigo-600 mr-3" size={24} />
+                <span>Problem Solving</span>
+              </div>
+              <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
+                <Mail className="text-indigo-600 mr-3" size={24} />
+                <span>Graphic Design</span>
               </div>
             </div>
-          </motion.section>
+          </div>
+        )}
 
-          <motion.section variants={item} className="space-y-4">
-            <h2 className="text-2xl font-bold text-white border-b border-slate-700 pb-2">Connect</h2>
-            <div className="flex flex-col gap-3">
-              <a href="#" className="flex items-center gap-2 text-slate-300 hover:text-cyan-500 transition-colors">
-                <Github className="h-5 w-5" />
-                <span>github.com/johndoe</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 text-slate-300 hover:text-cyan-500 transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span>linkedin.com/in/johndoe</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 text-slate-300 hover:text-cyan-500 transition-colors">
-                <Globe className="h-5 w-5" />
-                <span>johndoe-security.com</span>
-              </a>
+        {/* Education Section */}
+        {(activeTab === 'all' || activeTab === 'education') && (
+          <div className="mb-8">
+            <h2 className="text-xl font-bold text-indigo-800 border-b-2 border-indigo-200 pb-2 mb-4">
+              EDUCATION
+            </h2>
+            <div className="space-y-6">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
+                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                  <span className="text-indigo-700 font-medium">2024 - 2028</span>
+                </div>
+                <div className="md:w-3/4">
+                  <h3 className="text-lg font-semibold">Presidential Graduate School</h3>
+                  <p className="text-gray-600">BACHELOR OF TECHNOLOGY</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
+                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                  <span className="text-indigo-700 font-medium">2023 - 2024</span>
+                </div>
+                <div className="md:w-3/4">
+                  <h3 className="text-lg font-semibold">Trinity International SS & College</h3>
+                  <p className="text-gray-600">SECONDARY SCHOOL</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
+                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                  <span className="text-indigo-700 font-medium">2017 - 2023</span>
+                </div>
+                <div className="md:w-3/4">
+                  <h3 className="text-lg font-semibold">Little Angels School</h3>
+                  <p className="text-gray-600">PRIMARY SCHOOL</p>
+                </div>
+              </div>
             </div>
-          </motion.section>
-        </motion.div>
+          </div>
+        )}
+      </div>
+
+      {/* Footer */}
+      <div className="bg-gray-100 p-4 text-center text-gray-600 text-sm">
+        <p>Manash Hada | Cybersecurity Enthusiast | © {new Date().getFullYear()}</p>
       </div>
     </div>
-  )
+  );
 }
