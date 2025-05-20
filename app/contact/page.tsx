@@ -88,7 +88,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Email</h3>
-                  <p className="text-slate-400">contact@cybersecurity-expert.com</p>
+                  <p className="text-slate-400">contact@manashada@proton.new</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Phone</h3>
-                  <p className="text-slate-400">+1 (555) 123-4567</p>
+                  <p className="text-slate-400">+977 9810212694</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Location</h3>
-                  <p className="text-slate-400">San Francisco, CA</p>
+                  <p className="text-slate-400">Jadibuti, Kathmandu, CA</p>
                 </div>
               </div>
             </div>
@@ -114,8 +114,8 @@ export default function ContactPage() {
             <div className="mt-8">
               <h3 className="font-medium text-white mb-3">Working Hours</h3>
               <div className="space-y-2 text-slate-400">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: By appointment</p>
+                <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+                <p>Saturday: Closed</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>
