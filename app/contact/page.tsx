@@ -88,7 +88,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Email</h3>
-                  <p className="text-slate-400">contact@manashada@proton.new</p>
+                  <p className="text-slate-400">manashada@proton.new</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Location</h3>
-                  <p className="text-slate-400">Jadibuti, Kathmandu, CA</p>
+                  <p className="text-slate-400">Lokanthali, Bhaktapur</p>
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
               </div>
             </div>
           </motion.div>
-
+{/* 
           <motion.div variants={item} className="rounded-lg border border-slate-700 bg-slate-900/50 p-6">
             <h2 className="text-2xl font-bold text-white mb-4">Security Services</h2>
             <ul className="space-y-2">
@@ -146,7 +146,7 @@ export default function ContactPage() {
               </li>
             </ul>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           variants={container}
