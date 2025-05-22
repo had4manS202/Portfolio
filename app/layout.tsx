@@ -13,5 +13,9 @@ export default function RootLayout({
 import './globals.css'
 
 export const metadata = {
-      generator: 'v0.dev'
+     title: 'Manash Hada',
+  description: 'An CyberSecurity enthusiastic',
+  icons: {
+    icon: '/pikachu.jpg', 
+  },
     };
