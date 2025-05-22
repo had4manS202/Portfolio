@@ -1,17 +1,5 @@
 {
-  "node": {
-    "40073bc7e440a9de7cd813dd3e043e725d391e6187": {
-      "workers": {
-        "app/contact/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fkali%2FDocuments%2FPortfolio%2Fapp%2Fcontact%2Factions.ts%22%2C%5B%7B%22id%22%3A%2240073bc7e440a9de7cd813dd3e043e725d391e6187%22%2C%22exportedName%22%3A%22submitContactForm%22%7D%5D%5D%5D&__client_imported__=true!",
-          "async": false
-        }
-      },
-      "layer": {
-        "app/contact/page": "action-browser"
-      }
-    }
-  },
+  "node": {},
   "edge": {},
   "encryptionKey": "6dloJiKIge93VH3iEksQTyq6BO+EkHVIu3daulSp5UQ="
 }
