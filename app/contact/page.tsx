@@ -145,9 +145,9 @@ export default function ContactPage() {
                 Security Training & Workshops
               </li>
             </ul>
-          </motion.div>
-        </motion.div> */}
+          </motion.div>*/}
 
+        </motion.div> 
         <motion.div
           variants={container}
           initial="hidden"
