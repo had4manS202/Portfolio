@@ -4,8 +4,9 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Shield, Terminal, Code, Lock, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("all")
@@ -14,60 +15,66 @@ export default function GalleryPage() {
   const projects = [
     {
       id: 1,
-      title: "Network Security Audit",
-      category: "audit",
-      description: "Comprehensive security audit for enterprise networks",
-      icon: <Shield className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+      title: "Introduction to Cybersecurity",
+      category: "training",
+      company:"Cisco",
+      description: "Cisco verifies the earner of this badge successfully completed the Introduction to Cybersecurity course.",
+      icon: "https://media.licdn.com/dms/image/v2/D560BAQHT3lpSlRAwCg/company-logo_100_100/B56ZaSy889G4AQ-/0/1746219552862/cisco_logo?e=1753315200&v=beta&t=RRu25rvJMKSdiVNZiq_9sdI9dcV2oIqWKr3Zl-Yt5K4",
+      link:"https://www.credly.com/badges/66b68599-057a-4480-abb7-89d52cec268e/linked_in_profile"
     },
     {
       id: 2,
-      title: "Secure Authentication System",
-      category: "development",
-      description: "Zero-trust authentication framework for web applications",
-      icon: <Lock className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+      title: "ISC2 Candidate",
+      company:"ISC2",
+      category: "training",
+      description: "ISC2 Candidates are individuals pursuing or considering a cybersecurity certification",
+      icon: "https://media.licdn.com/dms/image/v2/D4E0BAQEANDNp1O78-g/company-logo_100_100/company-logo_100_100/0/1692269546870?e=1753315200&v=beta&t=TWo8TWCsGB0JlKgZvsT9VVFHMO7K88j4sMD_aIzBsfg",
+      link:"https://www.credly.com/badges/645cef42-97cd-4fc8-9ccf-b56337884a7a/linked_in_profile"
     },
     {
       id: 3,
-      title: "Vulnerability Scanner",
-      category: "tools",
-      description: "Automated vulnerability detection and reporting tool",
-      icon: <Terminal className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+      title: "Check Point Jump Start - Cloud Security",
+      company:"Check Point Software Technologies",
+      category: "training",
+      description: "Participated in Check Point Jump Start - Cloud Security course which is a free introduction to Check Point CloudGuard",
+      icon: "https://media.licdn.com/dms/image/v2/D560BAQGtqN8lHnC7WA/company-logo_100_100/company-logo_100_100/0/1698642229581/check_point_software_technologies_logo?e=1753315200&v=beta&t=0MTwHBOjEweyTXtdj1t-3cfQ3lsugRbJaTz_2BlCqhE",
+      link:"https://www.credly.com/badges/7b6b78a7-23ff-4263-964b-6336eb20fdf6/linked_in_profile"
     },
     {
       id: 4,
-      title: "Secure Code Review",
-      category: "audit",
-      description: "Static and dynamic code analysis for security flaws",
-      icon: <Code className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+      title: "Check Point Jump Start - CloudGuard Posture Management",
+      company:"Check Point Software Technologies",
+      category: "traning",
+      description: "Completed the Check Point Jump Start - CloudGuard Posture Management course",
+      icon: 'https://media.licdn.com/dms/image/v2/D560BAQGtqN8lHnC7WA/company-logo_100_100/company-logo_100_100/0/1698642229581/check_point_software_technologies_logo?e=1753315200&v=beta&t=0MTwHBOjEweyTXtdj1t-3cfQ3lsugRbJaTz_2BlCqhE',
+      link:"https://www.credly.com/badges/eda6122a-0efc-4be8-b261-ff803a6d3249/linked_in_profile"
     },
     {
       id: 5,
-      title: "Encryption Library",
-      category: "development",
-      description: "High-performance encryption library for sensitive data",
-      icon: <Lock className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+      title: "Check Point Jump Start - Quantum Management",
+      company:"Check Point Software Technologies",
+      category: "training",
+      description: "Completed the Check Point Jump Start - Quantum Management course, which teaches configuration and management of Check Point Security Gateways",
+      icon: 'https://media.licdn.com/dms/image/v2/D560BAQGtqN8lHnC7WA/company-logo_100_100/company-logo_100_100/0/1698642229581/check_point_software_technologies_logo?e=1753315200&v=beta&t=0MTwHBOjEweyTXtdj1t-3cfQ3lsugRbJaTz_2BlCqhE',
+      link:"https://media.licdn.com/dms/image/v2/D560BAQGtqN8lHnC7WA/company-logo_100_100/company-logo_100_100/0/1698642229581/check_point_software_technologies_logo?e=1753315200&v=beta&t=0MTwHBOjEweyTXtdj1t-3cfQ3lsugRbJaTz_2BlCqhE"
     },
     {
       id: 6,
-      title: "Threat Intelligence Platform",
-      category: "tools",
-      description: "Real-time threat monitoring and intelligence gathering",
-      icon: <Shield className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
-    },
-    {
-      id: 7,
-      title: "Security Training Program",
+      title: "Check Point Jump Start - SMB",
+      company:"Check Point Software Technologies",
       category: "training",
-      description: "Comprehensive cybersecurity awareness training",
-      icon: <Terminal className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+      description: "Passed the Check Point Jump Start - SMB exam on Pearson Vue (#156-413) after completing the course",
+      icon: 'https://media.licdn.com/dms/image/v2/D560BAQGtqN8lHnC7WA/company-logo_100_100/company-logo_100_100/0/1698642229581/check_point_software_technologies_logo?e=1753315200&v=beta&t=0MTwHBOjEweyTXtdj1t-3cfQ3lsugRbJaTz_2BlCqhE',
+      link:"https://www.credly.com/badges/9385580a-72f4-4c28-861c-d421c4ddffff/linked_in_profile"
     },
-    {
-      id: 8,
-      title: "Penetration Testing Framework",
-      category: "tools",
-      description: "Advanced penetration testing toolkit for security professionals",
-      icon: <Terminal className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
-    },
+    // {
+    //   id: 5,
+    //   title: "Encryption Library",
+    //   category: "development",
+    //   description: "High-performance encryption library for sensitive data",
+    //   icon: <Lock className="h-10 w-10 text-cyan-500" strokeWidth={1.5} />,
+    // },
+  
   ]
 
   const filteredProjects = projects.filter(
@@ -98,7 +105,7 @@ export default function GalleryPage() {
       <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
         <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Project Gallery</h1>
         <p className="max-w-[700px] text-slate-400 md:text-xl/relaxed">
-          Explore my cybersecurity projects, tools, and research
+          Explore my cybersecurity certificates, projects, tools, and research
         </p>
       </div>
 
@@ -118,7 +125,7 @@ export default function GalleryPage() {
             <TabsTrigger value="all" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
               All
             </TabsTrigger>
-            <TabsTrigger value="audit" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
+            <TabsTrigger value="audits" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
               Audits
             </TabsTrigger>
             <TabsTrigger value="development" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
@@ -147,16 +154,18 @@ export default function GalleryPage() {
             className="group flex flex-col space-y-4 rounded-lg border border-slate-700 bg-slate-900/50 p-6 transition-all hover:border-cyan-500/50 hover:bg-slate-800/50"
           >
             <div className="flex h-16 w-16 items-center justify-center rounded-md border border-slate-700 bg-slate-800/50 group-hover:border-cyan-500/50">
-              {project.icon}
+              {/* {project.icon} */}
+                  <Image src={project.icon} alt={project.company}  width={48} height={48} className="h-12 w-12 rounded-full object-cover" />
             </div>
             <div className="space-y-2">
               <h3 className="font-bold text-white">{project.title}</h3>
+              <h3 className="font-bold text-white">{project.company}</h3>
               <p className="text-sm text-slate-400">{project.description}</p>
             </div>
             <div className="flex-1 flex items-end">
-              <Button variant="link" className="px-0 text-cyan-500 hover:text-cyan-400">
+              <Link href={project.link} target="_blank" rel="noopener noreferrer" className="px-0 text-cyan-500 hover:text-cyan-400">
                 View Details
-              </Button>
+              </Link>
             </div>
           </motion.div>
         ))}
