@@ -49,7 +49,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-900/50">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-900/50">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2">
-              {[1, 2, 3, 4].map((item) => (
+              {[1].map((item) => (
                 <Link
                   href="/gallery"
                   key={item}
@@ -125,7 +125,7 @@ export default function Home() {
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
                     <h3 className="font-bold text-white">Project {item}</h3>
-                    <p className="text-sm text-slate-400">Cybersecurity solution</p>
+                    <p className="text-sm text-slate-400">Arduino Basics – A Beginner’s Guide</p>
                   </div>
                 </Link>
               ))}

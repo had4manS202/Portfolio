@@ -67,6 +67,15 @@ export default function GalleryPage() {
       icon: 'https://media.licdn.com/dms/image/v2/D560BAQGtqN8lHnC7WA/company-logo_100_100/company-logo_100_100/0/1698642229581/check_point_software_technologies_logo?e=1753315200&v=beta&t=0MTwHBOjEweyTXtdj1t-3cfQ3lsugRbJaTz_2BlCqhE',
       link:"https://www.credly.com/badges/9385580a-72f4-4c28-861c-d421c4ddffff/linked_in_profile"
     },
+    {
+      id: 7,
+      title: "Arduino Basics – A Beginner’s Guide",
+      company:"Github",
+      category: "development",
+      description: " This guide is designed for beginners interested in getting started with Arduino, ESP32, and ESP8266 boards along with common components such as sensors, breadboards, and wiring concepts. ",
+      icon: 'https://imgs.search.brave.com/KIwbK-T1StgpAOn2ELXFcnWeEdMDiQmSothz7kfUeLQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS12/ZWN0b3IvYXJkdWlu/by1pbnRlcmZhY2lu/Zy1yZ2ItbGVkLWls/bHVzdHJhdGlvbi0y/NjBudy0xNTExNDQ3/MzEyLmpwZw',
+      link:"https://github.com/had4manS202/Arduino"
+    },
     // {
     //   id: 5,
     //   title: "Encryption Library",

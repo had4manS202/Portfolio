@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="w-full border-t border-slate-700 bg-slate-900/50">
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
         <div className="flex items-center gap-2">
-          <Shield className="h-5 w-5 text-cyan-500" />
           <span className="text-sm font-bold text-white">Manash Hada</span>
         </div>
         <div className="flex gap-4">
@@ -29,7 +28,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-center text-sm text-slate-400 md:text-right">
-          &copy; {new Date().getFullYear()} CyberPortfolio. All rights reserved.
+          &copy; {new Date().getFullYear()} Manash Hada. All rights reserved.
         </p>
       </div>
     </footer>

@@ -27,7 +27,7 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Gallery", path: "/gallery" },
+    { name: "Projects", path: "/gallery" },
     { name: "Images", path: "/images" },
     { name: "CV", path: "/cv" },
     { name: "Contact", path: "/contact" },
@@ -41,7 +41,6 @@ export default function Header() {
     >
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Shield className="h-6 w-6 text-cyan-500" />
           <span className="font-bold text-white">Manash Hada</span>
         </Link>
         <nav className="hidden md:flex gap-6">
