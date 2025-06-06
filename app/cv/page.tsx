@@ -22,7 +22,7 @@ export default function ManashHadaCV() {
           <div className="mt-4 md:mt-0 flex flex-col">
             <div className="flex items-center mb-2">
               <Mail size={16} className="mr-2" />
-              <span className="text-indigo-100">hadamanash2023@gmail.com</span>
+              <span className="text-indigo-100">manashada@proton.new</span>
             </div>
             <div className="flex items-center">
               <MapPin size={16} className="mr-2" />
@@ -59,11 +59,11 @@ export default function ManashHadaCV() {
             </div>
             <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
               <Code className="text-indigo-600 mr-3" size={24} />
-              <span>C Programming</span>
+              <span>C, C++</span>
             </div>
             <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
               <Shield className="text-indigo-600 mr-3" size={24} />
-              <span>CTFs</span>
+              <span>Solving CTFs</span>
             </div>
             <div className="flex items-center bg-gray-50 p-3 rounded-md shadow-sm">
               <Briefcase className="text-indigo-600 mr-3" size={24} />

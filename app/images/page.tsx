@@ -6,10 +6,8 @@ import { Search, X, ZoomIn, Download, Info } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Child from "@/assets/images/child.jpg"
-import Ex from "@/assets/images/ex.jpg"
-import Smoke from "@/assets/images/smoke.jpg"
-import Withex from "@/assets/images/withex.jpg"
+import Child from "@/assets/images/WasteHackathon.png"
+import Ex from "@/assets/images/SafaStack.png"
 
 import {
   Dialog,
@@ -34,32 +32,32 @@ export default function ImagesGallery() {
   const images = [
     {
       id: 1,
-      title: "Me when I was a child",
+      title: "First Hackathon",
       category: "events",
-      description: "Secure network infrastructure setup with multiple security layers",
+      description: "One of the most memorable hackathons",
       src: typeof Child === "string" ? Child : Child.src,
     },
     {
       id: 2,
-      title: "The past I can't forget",
+      title: "My Team",
       category: "events",
-      description: "Modern SOC environment for real-time threat monitoring",
+      description: "With my team: Lagzen Thakuri, Jyotsana Sigdel, & Swikriti Poudel",
       src: typeof Ex === "string" ? Ex : Ex.src,
     },
-    {
-      id: 3,
-      title: "Dream that never came true",
-      category: "events",
-      description: "Workstation configured for advanced penetration testing",
-      src: typeof Withex === "string" ? Withex : Withex.src,
-    },
-    {
-      id: 4,
-      title: "Meme's cafe ",
-      category: "events",
-      description: "Physical and digital security measures for data centers",
-      src: typeof Smoke === "string" ? Smoke : Smoke.src,
-    },
+    // {
+    //   id: 3,
+    //   title: "Dream that never came true",
+    //   category: "events",
+    //   description: "Workstation configured for advanced penetration testing",
+    //   src: typeof Withex === "string" ? Withex : Withex.src,
+    // },
+    // {
+    //   id: 4,
+    //   title: "Meme's cafe ",
+    //   category: "events",
+    //   description: "Physical and digital security measures for data centers",
+    //   src: typeof Smoke === "string" ? Smoke : Smoke.src,
+    // },
     // {
     //   id: 5,
     //   title: "Cisco Certificate ",
