@@ -55,7 +55,7 @@ export default function Home() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">Interests</h2>
                 <p className="max-w-[900px] text-slate-400 md:text-xl/relaxed">
-                  Specialized in various aspects of cybersecurity and digital protection
+                  Interested in various aspects of cybersecurity and digital protection
                 </p>
               </div>
             </div>
