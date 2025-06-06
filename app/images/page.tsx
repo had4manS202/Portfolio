@@ -39,7 +39,7 @@ export default function ImagesGallery() {
     },
     {
       id: 2,
-      title: "My Team",
+      title: "My Team: SafaStack",
       category: "events",
       description: "With my team: Lagzen Thakuri, Jyotsana Sigdel, & Swikriti Poudel",
       src: typeof Ex === "string" ? Ex : Ex.src,
