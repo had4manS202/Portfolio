@@ -103,7 +103,7 @@ export default function GalleryPage() {
   return (
     <div className="container px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Project Gallery</h1>
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">Certifications & Projects</h1>
         <p className="max-w-[700px] text-slate-400 md:text-xl/relaxed">
           Explore my cybersecurity certificates, projects, tools, and research
         </p>
