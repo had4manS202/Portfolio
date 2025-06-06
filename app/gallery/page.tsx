@@ -125,12 +125,12 @@ export default function GalleryPage() {
             <TabsTrigger value="all" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
               All
             </TabsTrigger>
-            <TabsTrigger value="audits" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
+            {/* <TabsTrigger value="audits" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
               Audits
             </TabsTrigger>
             <TabsTrigger value="development" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
               Development
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger value="tools" className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white">
               Tools
             </TabsTrigger>
