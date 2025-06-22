@@ -17,12 +17,14 @@ export default function ManashHadaCV() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold tracking-wide">MANASH HADA</h1>
-            <p className="text-indigo-200 mt-1 text-lg">CYBERSECURITY ENTHUSIAST</p>
+            <p className="text-indigo-200 mt-1 text-lg">
+              OFFENSIVE CYBERSECURITY ASSOCIATE
+            </p>
           </div>
           <div className="mt-4 md:mt-0 flex flex-col">
             <div className="flex items-center mb-2">
               <Mail size={16} className="mr-2" />
-              <span className="text-indigo-100">manashada@proton.new</span>
+              <span className="text-indigo-100">manashada@proton.me</span>
             </div>
             <div className="flex items-center">
               <MapPin size={16} className="mr-2" />
@@ -40,10 +42,14 @@ export default function ManashHadaCV() {
             SUMMARY
           </h2>
           <p className="text-gray-700">
-            I am a dedicated BSc IT student with a strong interest in cybersecurity and data science. 
-            I enjoy working on hands-on projects like CTF challenges, Arduino-based systems, and learning 
-            about ethical hacking and network security. I'm always curious to learn new technologies and 
-            enjoy solving problems step by step with focus and consistency.
+            I am a cybersecurity student focused on offensive security and
+            hands-on experience with penetration testing and vulnerability
+            assessment. Skilled in tools like Nmap, Metasploit, and Burp Suite,
+            I have worked on practical projects and participated in Capture The
+            Flag challenges. I’m learning continuously through my studies and
+            platforms like TryHackMe, with skills in Linux, scripting, and
+            network security. I’m eager to grow in a role where I can help
+            identify and fix security weaknesses to keep systems safe.
           </p>
         </div>
 
@@ -85,25 +91,36 @@ export default function ManashHadaCV() {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
                 <GraduationCap className="text-indigo-600 mr-2" size={20} />
-                <span className="text-indigo-700 font-medium">2024 - 2028</span>
+                <span
+                  className="text-indigo-700 fI am a dedicated BSc IT student with a strong interest in cybersecurity and data science. 
+            I enjoy working on hands-on projects like CTF challenges, Arduino-based systems, and learning 
+            about ethical hacking and network security. I'm always curious to learn new technologies and 
+            enjoy solving problems step by step with focus and consistency.ont-medium"
+                >
+                  2024 - 2028
+                </span>
               </div>
               <div className="md:w-3/4">
-                <h3 className="text-lg font-semibold">Presidential Graduate School</h3>
+                <h3 className="text-lg font-semibold">
+                  Presidential Graduate School
+                </h3>
                 <p className="text-gray-600">BACHELOR OF TECHNOLOGY</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
                 <GraduationCap className="text-indigo-600 mr-2" size={20} />
                 <span className="text-indigo-700 font-medium">2023 - 2024</span>
               </div>
               <div className="md:w-3/4">
-                <h3 className="text-lg font-semibold">Trinity International SS & College</h3>
+                <h3 className="text-lg font-semibold">
+                  Trinity International SS & College
+                </h3>
                 <p className="text-gray-600">SECONDARY SCHOOL</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/4 flex items-start mb-2 md:mb-0">
                 <GraduationCap className="text-indigo-600 mr-2" size={20} />
@@ -120,7 +137,9 @@ export default function ManashHadaCV() {
 
       {/* Footer */}
       <div className="bg-gray-100 p-4 text-center text-gray-600 text-sm">
-        <p>Manash Hada | Cybersecurity Enthusiast | © {new Date().getFullYear()}</p>
+        <p>
+          Manash Hada | Offensive Cybersecurity Associate | © {new Date().getFullYear()}
+        </p>
       </div>
     </div>
   );

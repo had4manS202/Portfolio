@@ -88,7 +88,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Email</h3>
-                  <p className="text-slate-400">manashada@proton.new</p>
+                  <p className="text-slate-400">manashada@proton.me</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
